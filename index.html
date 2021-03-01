@@ -14,9 +14,9 @@
     <script>
         function matchpassword() 
 {
-    var pw1 = document.getElementById("txtNewPassword");
+    var pw1 = $("input[name='txtNewPassword']").val();
 
-    var pw2 = document.getElementById("txtConfirmPassword");
+    var pw2 = $("input[name='txtConfirmPassword']").val();
 
     if(pw1 != pw2 ) 
     {   
