@@ -31,19 +31,19 @@
     <form id = "mainForm" method="post">
         <div class="mb-3">
             <label id="nom" class="form-label" >Nom </label><br>
-            <input id="nomv" placeholder="noms"  required="" class="form-control" required="" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,12}$" ><br>
+            <input id="nomv" placeholder="noms"  required="" class="form-control" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-])$" ><br>
 
             <label id="prenom" class="form-label">Prénom </label><br>
-            <input id="prenomv" placeholder="Prénom"  required="" class="form-control" required="" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,12}$" ><br>
+            <input id="prenomv" placeholder="Prénom"  required="" class="form-control"  pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-])$" ><br>
 
             <label id="adress" class="form-label">adress</label>
-            <input name="adressv" type="text" placeholder="adress" class="form-control" required="" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,12}$" ><br>
+            <input name="adressv" type="text" placeholder="adress" class="form-control" required="" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-])$" ><br>
 
             <label id="cp" class="form-label">code postal</label>
             <input name="cpv" type="number" placeholder="code postal" class="form-control" required><br>
 
             <label id="ville" class="form-label">ville</label>
-            <input name="villev" type="text" placeholder="ville" class="form-control" required="" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,12}$" ><br>
+            <input name="villev" type="text" placeholder="ville" class="form-control" required="" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-])$" ><br>
 
             <label id="telephone" class="form-label">Portable</label>
             <input id="telephonev" type="number" placeholder="06xxxxxxxx" class="form-control"><br>
@@ -66,7 +66,7 @@
         
 
             <label for="username" class="form-label">username </label><br>
-            <input id="username" placeholder="username"  required="" class="form-control" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,12}$" ><br>
+            <input id="username" placeholder="username"  required="" class="form-control" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-])$" ><br>
     </div>
     <button type="submit" onclick="matchpassword()"  class="btn btn-primary">Submit</button>
     </form>
