@@ -11,7 +11,24 @@
     <title>Document</title>
 </head>
 <body>
-    <form id = "mainForm"action="" method="post">
+    <script>
+        function matchpassword() 
+{
+    var pw1 = document.getElementById("txtNewPassword");
+
+    var pw2 = document.getElementById("txtConfirmPassword");
+
+    if(pw1 != pw2 ) 
+    {   
+        alert("Passwords did not match");  
+    }
+    else
+     {  
+        alert("Password created successfully");  
+      }  
+}
+    </script>
+    <form id = "mainForm" method="post">
         <div class="mb-3">
             <label for="nom" class="form-label">Nom </label><br>
             <input id="nom" placeholder="noms" autofocus="" required="" class="form-control"><br>
@@ -42,29 +59,16 @@
             </select><br>
 
             <label id ="password" for="inputPassword5" class="form-label">Password</label>
-            <input type="password" id="txtNewPassword" placeholder="Enter passward" name="pass" class="form-control" >
+            <input type="password" name="txtNewPassword" placeholder="Enter passward" name="pass" class="form-control" >
            
             <label id ="password_confirm" for="inputPassword5conf" class="form-label">confirmer Password</label>
-            <input type="password" id="txtConfirmPassword" placeholder="Confirm Passward" name="confpass" class="form-control" >
-
-            <script>
-                function checkPasswordMatch() {
-                    var password = $("#txtNewPassword").val();
-                    var confirmPassword = $("#txtConfirmPassword").val();
-                    if (password != confirmPassword)
-                        $("#CheckPasswordMatch").html("Passwords does not match!");
-                    else
-                        $("#CheckPasswordMatch").html("Passwords match.");
-                }
-                $(document).ready(function () {
-                   $("#txtConfirmPassword").keyup(checkPasswordMatch);
-                });
-            </script>
+            <input type="password" name="txtConfirmPassword" placeholder="Confirm Passward" name="confpass" class="form-control" >
+        
 
             <label for="username" class="form-label">username </label><br>
             <input id="username" placeholder="username" autofocus="" required="" class="form-control"><br>
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" onclick="matchpassword()"  class="btn btn-primary">Submit</button>
     </form>
 </body>
 
