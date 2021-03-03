@@ -4,9 +4,72 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="http://cdn.jsdelivr.net/jquery.validation/1.14.0/jquery.validate.min.js"></script>
+    <script>src="index.js"</script>
     <title>Document</title>
 </head>
 <body>
-    
+    <script>
+        function matchpassword() 
+{
+    var pw1 = $("input[name='txtNewPassword']").val();
+
+    var pw2 = $("input[name='txtConfirmPassword']").val();
+
+    if(pw1 != pw2 ) 
+    {   
+        alert("Passwords did not match");  
+    }
+    else
+     {  
+        alert("Password created successfully");  
+      }  
+}
+    </script>
+    <form id = "mainForm" method="post">
+        <div class="mb-3">
+            <label id="nom" class="form-label" >Nom </label><br>
+            <input id="nomv" placeholder="noms"  required="" class="form-control" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-])$" ><br>
+
+            <label id="prenom" class="form-label">Prénom </label><br>
+            <input id="prenomv" placeholder="Prénom"  required="" class="form-control"  pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-])$" ><br>
+
+            <label id="adress" class="form-label">adress</label>
+            <input name="adressv" type="text" placeholder="adress" class="form-control" required="" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-])$" ><br>
+
+            <label id="cp" class="form-label">code postal</label>
+            <input name="cpv" type="number" placeholder="code postal" class="form-control" required><br>
+
+            <label id="ville" class="form-label">ville</label>
+            <input name="villev" type="text" placeholder="ville" class="form-control" required="" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-])$" ><br>
+
+            <label id="telephone" class="form-label">Portable</label>
+            <input id="telephonev" type="number" placeholder="06xxxxxxxx" class="form-control"><br>
+
+            <label id="Email" class="form-label">Email</label>
+            <input name="Emailv" type="email" placeholder="compléter votre email" required class="form-control"><br>
+
+            <label id="civilité" class="form-label">civilite</label>
+            <select class="form-select" name="civ" id="civilite">
+                <option value="">choose your sexe</option>
+                <option value="M">masculin</option>
+                <option value="F">feminin</option>  
+            </select><br>
+
+            <label id ="password"  class="form-label">Password</label>
+            <input type="password" name="txtNewPassword" placeholder="Enter passward"  class="form-control" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,12}$">
+           
+            <label id ="password_confirm"  class="form-label">confirmer Password</label>
+            <input type="password" name="txtConfirmPassword" placeholder="Confirm Passward"  class="form-control" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,12}$" >
+        
+
+            <label for="username" class="form-label">username </label><br>
+            <input id="username" placeholder="username"  required="" class="form-control" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-])$" ><br>
+    </div>
+    <button type="submit" onclick="matchpassword()"  class="btn btn-primary">Submit</button>
+    </form>
 </body>
+
 </html>
